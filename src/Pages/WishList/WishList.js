@@ -15,7 +15,7 @@ class WishList extends Component {
   }
 
   componentDidMount = () => {
-    fetch("http://10.58.6.1:8000/user/wishlist", {
+    fetch("http://10.58.0.44:8000/user/wishlist", {
       method: "GET",
       headers: {
         Authorization:
@@ -87,7 +87,7 @@ class WishList extends Component {
 
   deleteData = (el) => {
     fetch(
-      `http://10.58.6.1:8000/user/wishlist?target=${this.state.wishItems[el].id}`,
+      `http://10.58.0.44:8000/user/wishlist?target=${this.state.wishItems[el].id}`,
       {
         method: "DELETE",
         headers: {

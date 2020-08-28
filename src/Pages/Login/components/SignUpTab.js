@@ -60,7 +60,7 @@ class SignUpTab extends React.Component {
   };
 
   sendData = () => {
-    fetch("http://10.58.6.1:8000/user/signup", {
+    fetch("http://10.58.0.44:8000/user/signup", {
       method: "POST",
       body: JSON.stringify({
         email: this.state.email,

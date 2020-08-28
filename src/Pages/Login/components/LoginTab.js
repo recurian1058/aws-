@@ -24,7 +24,7 @@ class LoginTab extends React.Component {
 
   handleLogin = (e) => {
     this.state.email.includes("@" && ".") && this.state.password.length >= 8
-      ? fetch("http://10.58.6.1:8000/user/signin", {
+      ? fetch("http://10.58.0.44:8000/user/signin", {
           method: "POST",
           body: JSON.stringify({
             email: this.state.email,
