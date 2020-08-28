@@ -47,7 +47,9 @@ class ShopListRowItems extends Component {
                 className="categoryTitle"
                 onClick={() =>
                   this.props.history.push(
-                    `${this.props.match.params.mainCategory}/${this.props.match.params.category}`
+                    `${this.props.match.params.mainCategory}/${Object.keys(
+                      itemlist
+                    )}`
                   )
                 }
               >
@@ -78,15 +80,33 @@ class ShopListRowItems extends Component {
               <ul className="itemlist" ref={this.ulRef}>
                 {itemlist[Object.keys(itemlist)[0]] &&
                   itemlist[Object.keys(itemlist)[0]].map((item, idx) => {
-                    return <ShopListRowItem key={idx} item={item} />;
+                    return (
+                      <ShopListRowItem
+                        itemlist={this.props.itemlist}
+                        key={idx}
+                        item={item}
+                      />
+                    );
                   })}
                 {itemlist[Object.keys(itemlist)[1]] &&
                   itemlist[Object.keys(itemlist)[1]].map((item, idx) => {
-                    return <ShopListRowItem key={idx} item={item} />;
+                    return (
+                      <ShopListRowItem
+                        itemlist={this.props.itemlist}
+                        key={idx}
+                        item={item}
+                      />
+                    );
                   })}
                 {itemlist[Object.keys(itemlist)[2]] &&
                   itemlist[Object.keys(itemlist)[2]].map((item, idx) => {
-                    return <ShopListRowItem key={idx} item={item} />;
+                    return (
+                      <ShopListRowItem
+                        itemlist={this.props.itemlist}
+                        key={idx}
+                        item={item}
+                      />
+                    );
                   })}
               </ul>
             </div>

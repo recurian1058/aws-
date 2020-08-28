@@ -27,7 +27,7 @@ class Nav extends Component {
         searchResult: e.target.value,
       },
       () => {
-        fetch(`${config.API}/product/products?q=${this.state.searchInput}`)
+        fetch(`${config.search}/product/products?q=${this.state.searchInput}`)
           .then((res) => res.json())
           .then((res) => {
             this.setState({ items: res });

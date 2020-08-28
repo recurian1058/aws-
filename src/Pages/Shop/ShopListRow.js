@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import ShopListRowItems from "./ShopListRowItems";
+import config from "../../config";
 import "./ShopListRow.scss";
 
 class ShopListRow extends Component {
@@ -12,7 +13,7 @@ class ShopListRow extends Component {
   }
 
   componentDidMount = () => {
-    fetch("http://10.58.0.44:8000/product/products", {
+    fetch(`${config.API}/product/products`, {
       method: "GET",
     })
       .then((res) => res.json())

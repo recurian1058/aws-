@@ -9,7 +9,9 @@ class ShopListRowItem extends Component {
         className="item"
         onClick={() =>
           this.props.history.push(
-            `/${this.props.match.params.title}/${this.props.match.params.mainCategory}/${this.props.match.params.category}/${this.props.item.id}`
+            `/${this.props.match.params.title}/${
+              this.props.match.params.mainCategory
+            }/${Object.keys(this.props.itemlist)}/${this.props.item.id}`
           )
         }
       >
